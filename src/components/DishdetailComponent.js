@@ -3,6 +3,15 @@ import { directive } from '@babel/types';
 import { Card, CardImg, CardImgOverlay, CardText, CardBody,
     CardTitle } from 'reactstrap';
 class DishDetail  extends Component{
+    componentDidMount() {
+        console.log('Dishdetail Component componentDidMount is invoked');
+
+    }
+    componentDidUpdate() {
+        console.log('Dishdetail Component componentDidUpdate is invoked');
+
+    }
+
     constructor(props){
         super(props);
         this.state = {
@@ -58,6 +67,7 @@ class DishDetail  extends Component{
         )
     }
     render(){
+        console.log('dishdetail component render is invoked');
         const dish = this.props.dish;
         if(dish==null){
             return(<div></div>);
